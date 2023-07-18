@@ -1,0 +1,22 @@
+.HELPTitle{
+	font-weight:bold;
+	font-size:32px;
+	margin: 50px;
+    text-align: center;
+}
+
+.HELPSubTitle{
+	font-weight:bold;
+	font-size:22px;
+	margin-top:20px;
+}
+
+.HELPBlock{
+	!text-indent:2em;
+	display: flex;
+    flex-direction: column;
+}
+
+.HELPBlock p{
+	margin-top:15px;
+}

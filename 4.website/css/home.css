@@ -1,0 +1,244 @@
+
+.piebox{
+	width:33%;
+}
+
+
+.PieInfo_txt {
+	opacity:0;
+
+}
+
+.subPie_g:hover + .PieInfo_txt{
+	opacity:1;
+	font-weight:bold;
+}
+.subPie_g:hover ~ .PieInfo_maintxt{
+	opacity:0
+}
+
+
+.subPie_g:hover{
+	stroke-width:3px;
+	filter:brightness(120%);
+
+}
+
+
+.subPie_g text{
+	transition:font-size 0.1s linear;
+}
+.subPie_g:hover text{
+	font-size:16px;
+	transition:font-size 0.1s linear;
+}
+
+.histbox{
+	width:66%;
+}
+
+.paragraph{
+	display:flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.homeblock_title{
+	background:var(--baseBG);
+	padding:1em;
+	color:white;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border:1px solid var(--baseBG);
+	font-size:18px;
+}
+
+.homeblock_content{
+	text-indent:2em;
+	padding:2em;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border:1px solid #ddd;
+	background:#f6f8fa;
+	font-size:18px;
+}
+
+.homeblock_content1{
+	display:flex;
+	flex-direction: row;
+}
+
+.homehist + rect{
+	pointer-events:none;
+}
+
+.homehist:hover + rect{
+	filter:brightness(120%);
+	stroke-width:3px;
+	pointer-events:none;
+}
+
+.homehist ~ text{
+	opacity:0;
+	transition:font-size 0.1s linear,opacity 0.1s linear;
+	pointer-events:none;
+}
+
+.homehist:hover ~ text{
+	opacity:1;
+	font-size:15px;
+	transition:font-size 0.1s linear,opacity 0.1s linear;
+}
+
+.homeblock_content0{
+	display:flex;
+	
+	
+}
+
+.para0_briefIntro{
+	word-break: break-word;
+	
+}
+
+.bodyBox{
+	display:flex;
+	margin-left: 80px;
+}
+
+
+
+.tagBox:hover svg path{
+	fill:#000000dd;
+	transition:fill 0.2s linear,stroke 0.2s linear;
+	cursor:pointer;
+	stroke:#000000dd;
+}
+
+.tagBox:hover p{
+	color:white !important;
+	transition:color 0.2s linear;
+}
+
+.tagBox:hover span{
+	color:white !important;
+	transition:color 0.2s linear;
+}
+
+.tagBox span{
+	transition:color 0.2s linear;
+}
+
+.tagBox svg path{
+	fill:#88888844;
+	transition:fill 0.2s linear,stroke 0.2s linear;
+}
+
+
+
+
+.tagBox p{
+	pointer-events:none;
+	transition:color 0.2s linear;
+}
+
+#mypopup{
+	
+	position:fixed;
+	pointer-events:none;
+	border:0.5px solid grey;
+	background:white;
+	padding:5px;
+	font-size:12px;
+	z-index:99;
+}
+
+.tagBox{
+	position:absolute;
+	font-size:7px;
+}
+
+.bigTagBox{
+	width:244px;
+	margin-left:-344px;
+	margin-right:100px;
+	overflow: visible;
+	position:relative;
+}
+.tagBox p{
+	text-align:center;
+	text-indent:0;
+	padding:5px;
+
+
+}
+
+.bodyBox svg{
+
+	overflow: visible;
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.Contact_father{
+	
+	
+	height:20px;
+	overflow:visible;
+	z-index:77;
+	margin:20px;
+	position:relative;
+	right:60px;
+	opacity: 0.3;
+	transition:opacity 0.2s ease;
+
+}
+
+.Contact_father:hover{
+	opacity: 1;
+	transition:opacity 0.2s ease;
+	
+}
+.Contact{
+	transition:width 0.2s ease,height 0.2s ease;
+	background:white;
+	border-radius:6px;
+	margin:auto 10px auto auto;
+	padding:5px;
+	overflow:hidden;
+	align-items: flex-start;
+	display:flex;
+	flex-flow: column;
+	white-space: normal;
+	width: 97.5px;
+    height: 100%;
+
+}
+
+.contactus{
+	font-size:14px;
+	font-weight:normal;
+}
+
+.helpInfoTitle{
+	font-weight:bold;
+	font-size:16px;
+	margin: 0px auto 5px auto;
+	white-space: nowrap;
+	display:flex;
+	flex-flow:row;
+}
+
+.helpInfoTitle > p{
+	margin:auto;
+}
+
+.helpInfoTitle > svg{
+	height:30px;
+	width:30px;
+}
+
+.helpInfoContent{
+	width:500px;
+}
