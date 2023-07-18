@@ -10,8 +10,8 @@ MatrixEQTL<-function(SNP_file_name=SNP_file_name,expression_file_name=expression
 	output_file_name_cis = gzfile(paste0("cis/part_",c,".gz.tmp"),"w"); #顺式
 	output_file_name_tra = gzfile(paste0("trans/part_",c,".gz.tmp"),"w"); #反式
 	# 只有在高于阈值重要的gene-SNP关联对才会被保存
-	pvOutputThreshold_cis = 0.05;
-	pvOutputThreshold_tra = 0.0001
+	pvOutputThreshold_cis = 1;
+	pvOutputThreshold_tra = 1
 	 
 	# 误差协方差矩阵
 	#设置为numeric()
