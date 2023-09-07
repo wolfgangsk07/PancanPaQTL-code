@@ -25,13 +25,13 @@ function updateHomeDiagram(){
 	var briefIntro=document.createElement("div")
 	homeblock_content0.append(briefIntro)
 	briefIntro.className="para0_briefIntro"
-	briefIntro.innerHTML="<p>Most human genes have multiple promoters that control the expression of distinct isoforms. The use of these alternative promoters enables the regulation of isoform expression pre-transcriptionally, which present a significant influence on the cancer transcriptome. Alternative promoters are frequently found in cancer, which could contribute to the cellular transformation of cancer and become highly relevant as sensors and tumor-restricted activators for immunotherapy and the development of novel cancer drugs. Recent studies have revealed the significant roles of genetic variants on promoter usage (puQTLs). Therefore, we systematically investigated the effects of single nucleotide polymorphisms (SNPs) on promoter usage, and identified puQTLs across 33 cancer types from TCGA. In addition, we also identified associations between promoter activity and pharmacogenomic and immune infiltration across human cancers.</p>"+
-		'<br><p>In Pancan-puQTL, users can:</p>'+
-		'<br><p>1) <span style="font-weight:bold;">Cis/Trans-puQTLs: </span>Browse or search cis-puQTLs and trans-puQTLs across different cancer types; </p>'+
-		'<br><p>2) <span style="font-weight:bold;">Survival-puQTLs: </span>Browse or search puQTLs associated with patient overall survival across different cancer types; </p>'+
-		'<br><p>3) <span style="font-weight:bold;">GWAS-puQTLs: </span>Browse or search puQTLs in GWAS linkage disequilibrium (LD) regions;</p>'+
-		'<br><p>4) <span style="font-weight:bold;">Drug-puQTLs: </span>Browse or search association between promoter activity and drug response across human cancers;</p>'+
-		'<br><p>5) <span style="font-weight:bold;">Immune-puQTLs: </span>Browse or search association between promoter activity and different type of immune cell infiltration across human cancers;</p>'+
+	briefIntro.innerHTML="<p>Most human genes have multiple promoters that control the expression of distinct isoforms. The use of these alternative promoters enables the regulation of isoform expression pre-transcriptionally, which present a significant influence on the cancer transcriptome. Alternative promoters are frequently found in cancer, which could contribute to the cellular transformation of cancer and become highly relevant as sensors and tumor-restricted activators for immunotherapy and the development of novel cancer drugs. Recent studies have revealed the significant roles of genetic variants on promoter activity (paQTLs). Therefore, we systematically investigated the effects of single nucleotide polymorphisms (SNPs) on promoter activity, and identified paQTLs across 33 cancer types from TCGA. In addition, we also identified associations between promoter activity and pharmacogenomic and immune infiltration across human cancers.</p>"+
+		'<br><p>In Pancan-paQTL, users can:</p>'+
+		'<br><p>1) <span style="font-weight:bold;">Cis/Trans-paQTLs: </span>Browse or search cis-paQTLs and trans-paQTLs across different cancer types; </p>'+
+		'<br><p>2) <span style="font-weight:bold;">Survival-paQTLs: </span>Browse or search paQTLs associated with patient overall survival across different cancer types; </p>'+
+		'<br><p>3) <span style="font-weight:bold;">GWAS-paQTLs: </span>Browse or search paQTLs in GWAS linkage disequilibrium (LD) regions;</p>'+
+		'<br><p>4) <span style="font-weight:bold;">Drug-paQTLs: </span>Browse or search association between promoter activity and drug response across human cancers;</p>'+
+		'<br><p>5) <span style="font-weight:bold;">Immune-paQTLs: </span>Browse or search association between promoter activity and different type of immune cell infiltration across human cancers;</p>'+
 		'<br><p>6) Download all results and figures.</p>'
 
 	//右侧body

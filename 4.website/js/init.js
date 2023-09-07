@@ -103,8 +103,8 @@ function init_ciseqtl(){
 	
 	inputComp[1]=new Object()
 	inputComp[1].type="input"
-	inputComp[1].title="PromoterID:"
-	inputComp[1].tag='One or more PromoterIDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
+	inputComp[1].title="Promoter ID:"
+	inputComp[1].tag='One or more Promoter IDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
 	inputComp[1].placeholder="(empty for all Promoters)"
 	inputComp[1].value=""
 	
@@ -119,7 +119,7 @@ function init_ciseqtl(){
 	
 	inputComp[3]=new Object()
 	inputComp[3].type="input"
-	inputComp[3].title="P-value<=:"
+	inputComp[3].title="Pvalue<=:"
 	inputComp[3].tag='e.g. <span style="font-style:italic">0.005</span>'
 	inputComp[3].placeholder="(empty for all)"
 	inputComp[3].value=""
@@ -138,7 +138,7 @@ function init_ciseqtl(){
 	inputComp[5].placeholder="(empty for all Genes)"
 	inputComp[5].value=""
 	
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Cis-puQTLs:</span> Cis-puQTLs module collected genetic variants which are significantly (FDR < 0.05) associated with promoter activity within 1 MB across human cancers, which were determined by linear regression using Matrix eQTL.',inputComp=inputComp,func="cis_eqtl",iconURL="pic/cis_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Cis-paQTLs:</span> Cis-paQTLs module collected genetic variants which are significantly (FDR < 0.05) associated with promoter activity within 1 MB across human cancers, which were determined by linear regression using Matrix eQTL.',inputComp=inputComp,func="cis_eqtl",iconURL="pic/cis_QTL.png")
 }
 
 function init_transeqtl(){
@@ -157,8 +157,8 @@ function init_transeqtl(){
 	
 	inputComp[1]=new Object()
 	inputComp[1].type="input"
-	inputComp[1].title="PromoterID:"
-	inputComp[1].tag='One or more PromoterIDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
+	inputComp[1].title="Promoter ID:"
+	inputComp[1].tag='One or more Promoter IDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
 	inputComp[1].placeholder="(empty for all Promoters)"
 	inputComp[1].value=""
 	
@@ -171,7 +171,7 @@ function init_transeqtl(){
 	
 	inputComp[3]=new Object()
 	inputComp[3].type="input"
-	inputComp[3].title="P-value<=:"
+	inputComp[3].title="Pvalue<=:"
 	inputComp[3].tag='e.g. <span style="font-style:italic">0.005</span>'
 	inputComp[3].placeholder="(empty for all)"
 	inputComp[3].value=""
@@ -189,7 +189,7 @@ function init_transeqtl(){
 	inputComp[5].tag='One or more Genes. e.g. <span style="font-style:italic">NSFL1C,TP53</span>'
 	inputComp[5].placeholder="(empty for all Genes)"
 	inputComp[5].value=""
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Trans-puQTLs:</span> Trans-puQTLs module collected genetic variants which are significantly (FDR < 0.05) associated long distanced (> 1 MB) or inter-chromosomal promoter activity across human cancers, which were determined by linear regression using Matrix eQTL.',inputComp=inputComp,func="trans_eqtl",iconURL="pic/trans_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Trans-paQTLs:</span> Trans-paQTLs module collected genetic variants which are significantly (FDR < 0.05) associated long distanced (> 1 MB) or inter-chromosomal promoter activity across human cancers, which were determined by linear regression using Matrix eQTL.',inputComp=inputComp,func="trans_eqtl",iconURL="pic/trans_QTL.png")
 }
 
 
@@ -252,12 +252,12 @@ function init_gwaseqtl(){
 	
 	inputComp[7]=new Object()
 	inputComp[7].type="input"
-	inputComp[7].title="PromoterID:"
-	inputComp[7].tag='One or more PromoterIDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
+	inputComp[7].title="Promoter ID:"
+	inputComp[7].tag='One or more Promoter IDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
 	inputComp[7].placeholder="(empty for all Promoters)"
 	inputComp[7].value=""
 	
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">GWAS-puQTLs:</span> GWAS-puQTLs module identification: tagSNPs were derived from GWAS catalog website (http://www.ebi.ac.uk/gwas/) and the linkage disequilibrium were calculated with 1000 Genomes Phase 1 European population. Cis- or trans-puQTLs that in LD relation (r2 > 0.5) with tagSNPs were defined as GWAS- puQTLs.',inputComp=inputComp,func="gwaseqtl",iconURL="pic/GWAS_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">GWAS-paQTLs:</span> GWAS-paQTLs module identification: tagSNPs were derived from GWAS catalog website (http://www.ebi.ac.uk/gwas/) and the linkage disequilibrium were calculated with 1000 Genomes Phase 1 European population. Cis- or trans-paQTLs that in LD relation (r2 > 0.5) with tagSNPs were defined as GWAS- paQTLs.',inputComp=inputComp,func="gwaseqtl",iconURL="pic/GWAS_QTL.png")
 }
 
 function init_snpsurvival(){
@@ -292,7 +292,7 @@ function init_snpsurvival(){
 	
 	inputComp[3]=new Object()
 	inputComp[3].type="input"
-	inputComp[3].title="P-value<=:"
+	inputComp[3].title="Pvalue<=:"
 	inputComp[3].tag='e.g. <span style="font-style:italic">0.005</span>'
 	inputComp[3].placeholder="(empty for all)"
 	inputComp[3].value=""
@@ -304,7 +304,7 @@ function init_snpsurvival(){
 	inputComp[4].placeholder="(empty for all)"
 	inputComp[4].value=""
 	
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Survival-puQTLs:</span> Survival-puQTLs module collected cis- and trans-puQTLs which are significantly associated with patient overall survival across human cancers. For each puQTL, samples were classified into three groups: homozygous genotype AA, heterozygous genotype Aa and homozygous genotype aa (A and a represent two alleles of one SNP). The log-rank test was used to examine the differences in survival time, and Kaplan–Meier (KM) curves were plotted to represent the survival time for each group. puQTLs with FDR < 0.05 were defined as survival associated puQTLs.',inputComp=inputComp,func="snpsurvival",iconURL="pic/survival_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Survival-paQTLs:</span> Survival-paQTLs module collected cis- and trans-paQTLs which are significantly associated with patient overall survival across human cancers. For each paQTL, samples were classified into three groups: homozygous genotype AA, heterozygous genotype Aa and homozygous genotype aa (A and a represent two alleles of one SNP). The log-rank test was used to examine the differences in survival time, and Kaplan–Meier (KM) curves were plotted to represent the survival time for each group. paQTLs with FDR < 0.05 were defined as survival associated paQTLs.',inputComp=inputComp,func="snpsurvival",iconURL="pic/survival_QTL.png")
 }
 
 function init_drugs(){
@@ -339,8 +339,8 @@ function init_drugs(){
 	
 	inputComp[3]=new Object()
 	inputComp[3].type="input"
-	inputComp[3].title="PromoterID:"
-	inputComp[3].tag='One or more PromoterIDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
+	inputComp[3].title="Promoter ID:"
+	inputComp[3].tag='One or more Promoter IDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
 	inputComp[3].placeholder="(empty for all Promoters)"
 	inputComp[3].value=""
 	
@@ -375,7 +375,7 @@ function init_drugs(){
 	inputComp[6].tag='e.g. <span style="font-style:italic">Cell cycle</span>'
 	
 	
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Drug-puQTLs:</span> Drug-puQTLs module collected promoter activity which are significantly associated imputed drug response (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.',inputComp=inputComp,func="drugs",iconURL="pic/Drug_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Drug-paQTLs:</span> Drug-paQTLs module collected promoter activity which are significantly associated imputed drug response (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.',inputComp=inputComp,func="drugs",iconURL="pic/Drug_QTL.png")
 }
 
 function init_immune(){
@@ -410,8 +410,8 @@ function init_immune(){
 	
 	inputComp[3]=new Object()
 	inputComp[3].type="input"
-	inputComp[3].title="PromoterID:"
-	inputComp[3].tag='One or more PromoterIDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
+	inputComp[3].title="Promoter ID:"
+	inputComp[3].tag='One or more Promoter IDs. e.g. <span style="font-style:italic">prmtr_90440,prmtr_38627</span>'
 	inputComp[3].placeholder="(empty for all Promoters)"
 	inputComp[3].value=""
 	
@@ -446,7 +446,34 @@ function init_immune(){
 	inputComp[6].placeholder="(empty for all Genes)"
 	inputComp[6].value=""
 	
-	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Immune-puQTLs:</span> Immune- puQTLs module collected promoter activity which significantly associated immune cell abundance (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.',inputComp=inputComp,func="immune",iconURL="pic/TIL_QTL.png")
+	init_modules_table(BriefTitle="Brief Introduction",BriefContent='<span style="font-weight:bold">Immune-paQTLs:</span> Immune- paQTLs module collected promoter activity which significantly associated immune cell abundance (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.',inputComp=inputComp,func="immune",iconURL="pic/TIL_QTL.png")
+}
+
+function init_download(){
+	main=document.getElementById("main")
+	main.innerHTML=""
+	
+	var downSub=document.createElement("div")
+	downSub.className="downSub"
+	main.appendChild(downSub)
+	var downSub_title=document.createElement("div")
+	downSub.appendChild(downSub_title)
+	downSub_title.innerHTML="<p>Download of proActiv</p>"
+	downSub_title.className="downSub_title"
+	var downSub_content=document.createElement("div")
+	downSub.appendChild(downSub_content)
+	var tb_str="<table>"
+	for(var i=0;i<5;i++){
+		tb_str+="<tr>"
+		for(var j=0;j<7;j++){
+			if(initParams.cancerTypes.length>i*7+j+1){
+				tb_str+='<td><a href="data/aligned_proAc/'+initParams.cancerTypes[i*7+j+1]+'.gz">'+initParams.cancerTypes[i*7+j+1]+"</a></td>"
+			}
+		}
+		tb_str+="</tr>"
+	}
+	downSub_content.innerHTML=tb_str
+	
 }
 
 
@@ -539,19 +566,19 @@ function initHelp(){
 	
 	var HelpContent=document.createElement("div")
 	HelpContent.className="HELPBlock";
-	HelpContent.innerHTML='<p class="HELPTitle">HELP document of Pancan-puQTL</p>'+
-	'<p><br><a href="#help1">1. What is Cancer-puQTL?</a>'+
+	HelpContent.innerHTML='<p class="HELPTitle">HELP document of Pancan-paQTL</p>'+
+	'<p><br><a href="#help1">1. What is Pancan-paQTL?</a>'+
 	'<br><a href="#help2">2. Data sources for database construction.</a>'+
 	'<br><a href="#help3">3. The pipeline of database construction.</a>'+
 	'<br><a href="#help4">4. Data summary.</a>'+
-	'<br><a href="#help5">5. Six modules in Cancer-puQTL.</a></p>'+
+	'<br><a href="#help5">5. Six modules in Pancan-paQTL.</a></p>'+
 
-	'<p id="help1" class="HELPSubTitle">1.	What is Cancer-puQTL?</p>'+
-	'<p style="text-indent: 2em;">Cancer-puQTL is a database to provide a comprehensive resource of promoter usage quantitative trait loci (puQTLs) across 33 human cancer types.</p>'+
-	'<p style="text-indent: 2em;">In Cancer-puQTL, users can:'+
-	'<p style="text-indent: 2em;">1)  Browse or search cis-puQTLs and trans-puQTLs across different cancer types;'+
-	'<p style="text-indent: 2em;">2)  Browse or search puQTLs associated with patient overall survival across different cancer types;'+
-	'<p style="text-indent: 2em;">3)  Browse or search puQTLs in GWAS linkage disequilibrium (LD) regions;'+
+	'<p id="help1" class="HELPSubTitle">1.	What is Pancan-paQTL?</p>'+
+	'<p style="text-indent: 2em;">Pancan-paQTL is a database to provide a comprehensive resource of promoter activity quantitative trait loci (paQTLs) across 33 human cancer types.</p>'+
+	'<p style="text-indent: 2em;">In Pancan-paQTL, users can:'+
+	'<p style="text-indent: 2em;">1)  Browse or search cis-paQTLs and trans-paQTLs across different cancer types;'+
+	'<p style="text-indent: 2em;">2)  Browse or search paQTLs associated with patient overall survival across different cancer types;'+
+	'<p style="text-indent: 2em;">3)  Browse or search paQTLs in GWAS linkage disequilibrium (LD) regions;'+
 	'<p style="text-indent: 2em;">4)  Browse or search association between promoter activity and drug response across human cancers;'+
 	'<p style="text-indent: 2em;">5)  Browse or search association between promoter activity and different type of immune cell infiltration across human cancers;</p>'+
 	'<p id="help2" class="HELPSubTitle">2.	Data sources for database construction.</p>'+
@@ -560,14 +587,14 @@ function initHelp(){
 	'<img src="pic/flowchart.png" style="width:70%;margin:auto">'+
 	'<p id="help4" class="HELPSubTitle">4.	Data summary.</p>'+
 	'<img src="pic/helpstats.png" style="width:90%;margin:auto;"></img>'+
-	'<p id="help5" class="HELPSubTitle">5.	Six modules in Cancer-puQTL.</p>'+
-'<p style="text-indent: 2em;">We provide six modules (Cis-puQTLs, Trans-puQTLs , GWAS-puQTLs, Survival-puQTLs, Drug-puQTLs and Immune-puQTLs) for browse or search in Cancer- puQTL.'+
-'<p style="text-indent: 2em;">1) Cis-puQTLs module collected genetic variants which are significantly (FDR < 0.05) associated with promoter activity within 1 MB across human cancers, which were determined by linear regression using Matrix eQTL.'+
-'<p style="text-indent: 2em;">2) Trans-puQTLs module collected genetic variants which are significantly (FDR < 0.05) associated long distanced (> 1 MB) or inter-chromosomal promoter activity across human cancers, which were determined by linear regression using Matrix eQTL.'+
-'<p style="text-indent: 2em;">3) Survival-puQTLs module collected cis- and trans-puQTLs which are significantly associated with patient overall survival across human cancers. For each puQTL, samples were classified into three groups: homozygous genotype AA, heterozygous genotype Aa and homozygous genotype aa (A and a represent two alleles of one SNP). The log-rank test was used to examine the differences in survival time, and Kaplan–Meier (KM) curves were plotted to represent the survival time for each group. puQTLs with FDR < 0.05 were defined as survival associated puQTLs.'+
-'<p style="text-indent: 2em;">4) GWAS-puQTLs module identification: tagSNPs were derived from GWAS catalog website (http://www.ebi.ac.uk/gwas/) and the linkage disequilibrium were calculated with 1000 Genomes Phase 1 European population. Cis- or trans-puQTLs that in LD relation (r2 > 0.5) with tagSNPs were defined as GWAS- puQTLs.'+
-'<p style="text-indent: 2em;">5) Drug-puQTLs module collected promoter activity which are significantly associated imputed drug response (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.'+
-'<p style="text-indent: 2em;">6) Immune-puQTLs module collected promoter activity which significantly associated immune cell abundance (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers. '+
+	'<p id="help5" class="HELPSubTitle">5.	Six modules in Pancan-paQTL.</p>'+
+'<p style="text-indent: 2em;">We provide six modules (Cis-paQTLs, Trans-paQTLs , GWAS-paQTLs, Survival-paQTLs, Drug-paQTLs and Immune-paQTLs) for browse or search in Pancan- paQTL.'+
+'<p style="text-indent: 2em;">1) Cis-paQTLs module collected genetic variants which are significantly (FDR < 0.05) associated with promoter activity within 1 MB across human cancers, which were determined by linear regression using Matrix eQTL.'+
+'<p style="text-indent: 2em;">2) Trans-paQTLs module collected genetic variants which are significantly (FDR < 0.05) associated long distanced (> 1 MB) or inter-chromosomal promoter activity across human cancers, which were determined by linear regression using Matrix eQTL.'+
+'<p style="text-indent: 2em;">3) Survival-paQTLs module collected cis- and trans-paQTLs which are significantly associated with patient overall survival across human cancers. For each paQTL, samples were classified into three groups: homozygous genotype AA, heterozygous genotype Aa and homozygous genotype aa (A and a represent two alleles of one SNP). The log-rank test was used to examine the differences in survival time, and Kaplan–Meier (KM) curves were plotted to represent the survival time for each group. paQTLs with FDR < 0.05 were defined as survival associated paQTLs.'+
+'<p style="text-indent: 2em;">4) GWAS-paQTLs module identification: tagSNPs were derived from GWAS catalog website (http://www.ebi.ac.uk/gwas/) and the linkage disequilibrium were calculated with 1000 Genomes Phase 1 European population. Cis- or trans-paQTLs that in LD relation (r2 > 0.5) with tagSNPs were defined as GWAS- paQTLs.'+
+'<p style="text-indent: 2em;">5) Drug-paQTLs module collected promoter activity which are significantly associated imputed drug response (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers.'+
+'<p style="text-indent: 2em;">6) Immune-paQTLs module collected promoter activity which significantly associated immune cell abundance (FDR < 0.05) estimated by Spearman’s correlation analysis across human cancers. '+
 
 '<p class="HELPSubTitle">References:</p>'+
 "<p>[1].	Demircioglu D, Cukuroglu E, Kindermans M, et al. A Pan-cancer Transcriptome Analysis Reveals Pervasive Regulation through Alternative Promoters. Cell. 2019 178: 1465-1477 e1417."+
