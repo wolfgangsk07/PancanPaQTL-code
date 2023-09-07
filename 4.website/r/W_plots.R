@@ -733,7 +733,7 @@ myboxplot<-function(boxdata=NULL){
 	drawing$default$dpi<-dpi
 	drawing$default$height_in<-height_in
 	drawing$default$width_in<-width_in
-	left<-0.8*dpi
+	left<-0.5*dpi
 	right<-0.1*dpi
 	top<-0.3*dpi
 	bottom<-0.4*dpi
@@ -765,10 +765,10 @@ myboxplot<-function(boxdata=NULL){
 		drawing<-add_text(drawing,boxdata$main,x=left+(drawing$default$PlotScale[1]-left)/2,y=drawing$default$PlotScale[2]-top/2,cex=0.75,adj=c(0.5,0),bold=TRUE)
 	}
 	if(!is.null(boxdata$xlab)){
-		drawing<-add_text(drawing,boxdata$xlab,x=left+(drawing$default$PlotScale[1]-left)/2,y=bottom-bottom/2,cex=0.75,adj=c(0.5,1),bold=TRUE)
+		drawing<-add_text(drawing,boxdata$xlab,x=left+(drawing$default$PlotScale[1]-left)/2,y=bottom-bottom*0.7,cex=0.75,adj=c(0.5,1),bold=TRUE)
 	}
 	if(!is.null(boxdata$ylab)){
-		drawing<-add_text(drawing,boxdata$ylab,x=left/3,y=(drawing$default$PlotScale[2]-top-bottom)/2+bottom,cex=0.75,adj=c(0.5,0),srt=90,bold=TRUE)
+		drawing<-add_text(drawing,boxdata$ylab,x=left*0.4,y=(drawing$default$PlotScale[2]-top-bottom)/2+bottom,cex=0.75,adj=c(0.5,0),srt=90,bold=TRUE)
 	}
 	#转换数据坐标
 	y<-list()
@@ -916,7 +916,7 @@ mykmplot<-function(survivalpackage=NULL){
 			drawing<-add_lines(drawing,x=rep(left+i/xscale,2),y=c(bottom,bottom-tick),lwd=1)
 			drawing<-add_text(drawing,i,x=left+i/xscale,y=bottom-tick*1.5,cex=0.5,adj=c(0.5,1))
 		}
-		drawing<-add_text(drawing,"Time(years)",x=left+innerWidth/2,y=bottom-tick*5,cex=0.75,adj=c(0.5,1),bold=TRUE)
+		drawing<-add_text(drawing,"Time (years)",x=left+innerWidth/2,y=bottom-tick*5,cex=0.75,adj=c(0.5,1),bold=TRUE)
 		drawing<-add_text(drawing,"Survival probability",x=left-tick*7,y=bottom+innerHeight/2,cex=0.75,adj=c(0.5,0),srt=90,bold=TRUE)
 		
 		#画生存数据

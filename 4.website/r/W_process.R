@@ -23,7 +23,7 @@ cis_trans_eqtl<-function(userParams){
 	
 	UUID<-userParams["UUID"]
 	showTablePic<-TRUE
-	tablePicNeeds<-c("Cancer","PromoterID","SNP","FDR")
+	tablePicNeeds<-c("Cancer","Promoter ID","SNP","FDR")
 	tablePicFunc<-"go_cis_trans_fig"
 	table1<-list()
 	table1$type<-"table"
@@ -41,12 +41,12 @@ cis_trans_eqtl<-function(userParams){
 	#range_role[[2]]<-list(title="Size",value=c(size_low,size_high))
 	
 	upper_role<-list()
-	upper_role[[1]]<-list(title="P-value",value=pval)
+	upper_role[[1]]<-list(title="Pvalue",value=pval)
 	upper_role[[2]]<-list(title="FDR",value=FDR)
 	
 	
 	multi_role<-list()
-	multi_role[[1]]<-c(title="PromoterID",value=promoterid)
+	multi_role[[1]]<-c(title="Promoter ID",value=promoterid)
 	multi_role[[2]]<-c(title="SNP",value=SNP_id)
 	multi_role[[3]]<-c(title="Gene Symbol",value=genes)
 	
@@ -173,7 +173,7 @@ gwas_eqtl<-function(userParams){
 	
 	UUID<-userParams["UUID"]
 	showTablePic<-FALSE
-	tablePicNeeds<-c("Cancer","PromoterID","SNP","FDR")
+	tablePicNeeds<-c("Cancer","Promoter ID","SNP","FDR")
 	tablePicFunc<-"go_cis_trans_fig"
 	table1<-list()
 	table1$type<-"table"
@@ -202,7 +202,7 @@ gwas_eqtl<-function(userParams){
 	multi_role[[1]]<-c(title="tagSNP",value=tagSNP)
 	multi_role[[2]]<-c(title="SNP",value=SNP_id)
 	multi_role[[3]]<-c(title="Gene symbol",value=genes)
-	multi_role[[4]]<-c(title="PromoterID",value=promoterid)
+	multi_role[[4]]<-c(title="Promoter ID",value=promoterid)
 	
 	totalindex<-table_filter(filepath,single_role,multi_role,showTablePic,tablePicNeeds,tablePicFunc,range_role,upper_role=upper_role,contain_role=contain_role)
 	
@@ -247,7 +247,7 @@ drugs<-function(userParams){
 	
 	UUID<-userParams["UUID"]
 	showTablePic<-TRUE
-	tablePicNeeds<-c("Cancer","PromoterID","Drug name","RS","Pvalue")
+	tablePicNeeds<-c("Cancer","Promoter ID","Drug name","RS","Pvalue")
 	tablePicFunc<-"go_drug_fig"
 	table1<-list()
 	table1$type<-"table"
@@ -269,7 +269,7 @@ drugs<-function(userParams){
 	
 	
 	multi_role<-list()
-	multi_role[[1]]<-c(title="PromoterID",value=promoterid)
+	multi_role[[1]]<-c(title="Promoter ID",value=promoterid)
 	multi_role[[2]]<-c(title="SNP",value=SNP_id)
 	multi_role[[3]]<-c(title="Gene Symbol",value=genes)
 	
@@ -317,7 +317,7 @@ immune<-function(userParams){
 	
 	UUID<-userParams["UUID"]
 	showTablePic<-TRUE
-	tablePicNeeds<-c("Cancer","PromoterID","Immune cell","Source","Coefficient","P_value")
+	tablePicNeeds<-c("Cancer","Promoter ID","Immune cell","Source","RS","Pvalue")
 	tablePicFunc<-"go_immune_fig"
 	table1<-list()
 	table1$type<-"table"
@@ -339,7 +339,7 @@ immune<-function(userParams){
 	
 	
 	multi_role<-list()
-	multi_role[[1]]<-c(title="PromoterID",value=promoterid)
+	multi_role[[1]]<-c(title="Promoter ID",value=promoterid)
 	multi_role[[2]]<-c(title="SNP",value=SNP_id)
 	multi_role[[3]]<-c(title="Gene Symbol",value=genes)
 	
@@ -811,9 +811,9 @@ cis_trans_fig<-function(userParams){
 	SNPexpr<-as.numeric(read.table(pipe(paste0("pigz -cd ../data/aligned_SNPs/",cancer_type,"/",substr(snp,1,4),"_.gz|awk '{if(FNR!=1){if($1==\"",snp,"\"){print $0;exit}}}'")))[1,-1])
 	piRNAexpr<-as.numeric(read.table(pipe(paste0("pigz -cd ../data/aligned_proAc/",cancer_type,".gz|awk '{if(FNR!=1){if($1==\"",promoterid,"\"){print $0;exit}}}'")))[1,-1])
 	boxdata<-list()
-	boxdata$ylab=paste0(promoterid," expression level")
+	boxdata$ylab=paste0(promoterid," expression level log2(RPM +1)")
 	boxdata$xlab=paste0(snp," genotype")
-	boxdata$main=paste0(cancer_type," FDR=",fdr)
+	boxdata$main=paste0(cancer_type," (FDR=",fdr,")")
 	boxdata$data<-list()
 	Alle<-c("AA","Aa","aa")
 	cols<-c("#269534","#4c4dbc","#ff3f2e")
@@ -901,7 +901,7 @@ drugs_fig<-function(userParams){
 	#dat1<--log(dat1+1,2)
 	fig<-list()
 	fig$type<-"fig"
-	fig$drawing<-myplot(x=dat2,y=dat1,r=0.03,col="#1676b4",xlab=paste0(promoterid),ylab=drugname,main=paste(drugname,"vs",promoterid,"in",cancer_type),tag=paste0("Rho = ",Rho,", P = ",P),sampleNames=sampleNames,delLen=length(commonSamples)-sum(index))
+	fig$drawing<-myplot(x=dat2,y=dat1,r=0.03,col="#1676b4",xlab=paste0(promoterid),ylab=drugname,main=paste(drugname,"vs",promoterid,"in",cancer_type),tag=paste0("RS = ",Rho,", Pvalue = ",P),sampleNames=sampleNames,delLen=length(commonSamples)-sum(index))
 	outputs<-list()
 	outputs$fig1<-fig
 	#outputs$debug<-c(orgLen,sum(index))
@@ -947,7 +947,7 @@ immune_fig<-function(userParams){
 	#dat1<--log(dat1+1,2)
 	fig<-list()
 	fig$type<-"fig"
-	fig$drawing<-myplot(x=dat2,y=dat1,r=0.03,col="#1676b4",xlab=paste0(promoterid),ylab=immunetag,main=paste(immunetag,"vs",promoterid,"in",cancer_type),tag=paste0("Rho = ",Rho,", P = ",P),sampleNames=sampleNames,delLen=length(commonSamples)-sum(index))
+	fig$drawing<-myplot(x=dat2,y=dat1,r=0.03,col="#1676b4",xlab=paste0(promoterid),ylab=immunetag,main=paste(immunetag,"vs",promoterid,"in",cancer_type),tag=paste0("RS = ",Rho,", Pvalue = ",P),sampleNames=sampleNames,delLen=length(commonSamples)-sum(index))
 	outputs<-list()
 	outputs$fig1<-fig
 	#outputs$debug<-c(orgLen,sum(index))
